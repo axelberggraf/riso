@@ -1,0 +1,262 @@
+body{
+  background-color: lightgrey;
+  margin: 0;
+  transition: 2s;
+}
+
+#mainWrapper{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+
+
+.card{
+  width: 35vw;
+  height: 75vh;
+  /* border: solid 30px black; */
+
+  cursor: crosshair;
+  position:relative;
+  z-index: 3;
+
+  /* perspective: 500px; */
+}
+
+
+.image{
+  width: 100%;
+  height: 100%;
+
+
+  transform-style: preserve-3d;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotateX(30deg);
+  transform: perspective(1000px) rotateX(30deg) rotateY(30deg);
+}
+
+.overlay{
+  width: 112%;
+  height: 112%;
+  transform: translateX(-6%) translateY(-6%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("overlay.png");
+  pointer-events: none;
+  position: absolute;
+  transition: 2s;
+  opacity: 0;
+}
+
+.cm{
+background-image: url("overlayC.png") !important;
+
+}
+.image.first{
+/* transform-style: preserve-3d; */
+  transform: translateZ(0px);
+
+}
+
+.image.second{
+/* transform-style: preserve-3d; */
+  transform: translateZ(60px);
+
+}
+
+
+.image.third{
+
+/* transform-style: preserve-3d; */
+
+  transform: translateZ(60px);
+
+}
+
+.image.fourth{
+/* transform-style: preserve-3d; */
+  transform: translateZ(60px);
+
+}
+
+.chain1{
+    background-image: url("chain/cain-bg.png");
+}
+
+.chain2{
+    background-image: url("chain/chain-l1.png");
+}
+
+.chain3{
+    background-image: url("chain/chain-l2.png");
+}
+
+.chain4{
+    background-image: url("chain/chain-l3.png");
+}
+
+.chainr1{
+    background-image: url("chain/chainriso-bg.png");
+}
+
+.chainr2{
+    background-image: url("chain/chainriso-l1.png");
+}
+
+.chainr3{
+    background-image: url("chain/chainriso-l2.png");
+}
+
+.chainr4{
+    background-image: url("chain/chainriso-l3.png");
+}
+
+
+.b1{
+  background-image: url("boat/boat-bg.png");
+}
+
+.b2{
+    background-image: url("boat/boat-l1.png");
+}
+.b3{
+      background-image: url("boat/boat-l2.png");
+}
+.b4{
+      background-image: url("boat/boat-l3.png");
+}
+
+.br1{
+  background-image: url("boat/boatriso-bg.png");
+}
+
+.br2{
+    background-image: url("boat/boatriso-l1.png");
+}
+.br3{
+      background-image: url("boat/boatriso-l2.png");
+}
+.br4{
+      background-image: url("boat/boatriso-l3.png");
+}
+
+
+.h1{
+  background-image: url("hand/hand-bg.png");
+}
+.h2{
+  background-image: url("hand/hand-l1.png");
+}
+.h3{
+  background-image: url("hand/hand-l3.png");
+}
+.h4{
+  background-image: url("hand/hand-l2.png");
+}
+
+.hr1{
+  background-image: url("hand/handriso-bg.png");
+}
+.hr2{
+  background-image: url("hand/handriso-l1.png");
+}
+.hr3{
+  background-image: url("hand/handriso-l3.png");
+}
+.hr4{
+  background-image: url("hand/handriso-l2.png");
+}
+#popup{
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 20;
+  top:0;
+  transform: translateZ(500px);
+  background-color: rgba(255,255,255,0.8);
+  backdrop-filter: blur(4px);
+}
+
+h3{
+  width: 80%;
+  font-family: sans-serif;
+  font-weight: normal;
+  text-align: center;
+}
+
+p{
+  display: inline-block;
+  font-family: sans-serif;
+  color: black;
+  border: 1.5px solid black;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#light{
+  color:darkgrey;
+  border: 1.5px solid darkgrey;
+}
+
+/* #light:hover{
+  color:white;
+  border: 2px solid white;
+}
+
+#dark:hover{
+  color:white;
+  border: 2px solid white;
+} */
+
+.menu{
+  width: 100%;
+  position:fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  padding-bottom: 10px;
+}
+
+.blending{
+  mix-blend-mode: multiply;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .card{
+    width: 70vw;
+  }
+
+  #mainWrapper{
+    flex-wrap: wrap;
+    height: 200vh;
+  }
+
+  .overlay{
+    width: 124%;
+    height: 124%;
+    transform: translateX(-12%) translateY(-12%);
+
+  }
+
+}
